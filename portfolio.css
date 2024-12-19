@@ -130,17 +130,6 @@ footer {
     font-size: 15px;   
 }
 
-.button2 {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    color: white;
-    width: 250px;
-    font-size: 15px;
-}
-
 .button3 {
     background-color: Transparent;
     background-repeat:no-repeat;
