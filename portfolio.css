@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nom {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    text-decoration: underline;
+    color: white;
+}
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/1803730.jpg);
+}
+
+:root {
+    --main-radius:5px;
+    --main-padding:5px;
+}
+
+.barre {
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.4fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+grid-gap: 0.2rem;
+font-family: "Inter", sans-serif;
+font-weight: 800;
+text-transform: uppercase;
+font-size: 12px;
+text-align: center;
+color: white;
+}
+
+nav {
+    grid-area: nav;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+main {
+    grid-area: main;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+.moi {
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.cursus {
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+#sidebar {
+     grid-area: sidebar;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#sidebar ul li{
+    margin-top: 250px;
+}
+
+#content1 {
+    
+    grid-area: content1;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+#content2 {
+    grid-area: content2;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding); 
+    align-items: center;
+    justify-content: center;
+}
+
+#content3 {
+    grid-area: content3;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 15px;
+}
+
+.button1 {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: white;
+    width: 250px;
+    font-size: 15px;   
+}
+
+.button2 {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: white;
+    width: 250px;
+    font-size: 15px;
+}
+
+
+
+@media only screen and (max-width:550px){
+    .barre{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
